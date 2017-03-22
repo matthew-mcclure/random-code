@@ -5,7 +5,7 @@ function flatten(arr) {
 	arr = arr.replace(/\[/g, '').replace(/\]/g, '')
   	arr = arr.split(',')
   	for(var i = 0; i < arr.length; i++) {
-  		arr[i] = +arr[i]
+  		if(+arr[i]) arr[i] = +arr[i]
   	}
-  return arr
+	return arr
 }
